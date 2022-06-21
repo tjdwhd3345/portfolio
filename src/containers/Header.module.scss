@@ -1,0 +1,23 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1em;
+  padding: 0 12em;
+  align-items: center;
+  .logo {
+  }
+  .navbar {
+    display: flex;
+    flex-basis: auto;
+    flex-grow: 1;
+    .navlist {
+      display: flex;
+      justify-content: space-between;
+      margin-left: auto;
+      .navitem {
+        margin-left: 2em;
+        padding: 2em;
+      }
+    }
+  }
+}
