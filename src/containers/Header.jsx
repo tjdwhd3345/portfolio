@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { memo, useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import styles from './Header.module.scss';
 
 const Header = () => {
-  const navItem = ['Home', 'About', 'Projects', 'Contact'];
+  const [navItem] = useState(['', 'About', 'Projects', 'Contact']);
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
@@ -10,8 +11,16 @@ const Header = () => {
       </div>
       <nav className={styles.navbar}>
         <ul className={styles.navlist}>
-          {navItem.map((item) => (
-            <li className={styles.navitem}>{item}</li>
+          {navItem.map((item, i) => (
+            <li key={i} className={styles.navitem}>
+              <NavLink
+                exact
+                to={item.toLowerCase()}
+                className={({ isActive }) => (isActive ? 'active' : undefined)}
+              >
+                {item ? item : 'Home'}
+              </NavLink>
+            </li>
           ))}
         </ul>
       </nav>
@@ -19,4 +28,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default memo(Header);
