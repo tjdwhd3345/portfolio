@@ -4,6 +4,25 @@ font-family: 'Nanum Gothic', sans-serif;
 font-family: 'Noto Sans KR', sans-serif;
 font-family: 'Open Sans', sans-serif;
 */
+
+:root {
+  --green1: #00524C;
+  --green2: #005b49;
+  --green3: #007042;
+  --green4: #008543;
+  --green5: #019071;
+  --green6: #027159;
+  --green7: #276a4e;
+  --white1: #ffffff;
+  --white2: #fbfbfbfb;
+  --gray1: #efefef;
+  --gray2: #c9c9c9;
+  --gray3: #989898;
+  --font-light: 300;
+  --font-regular: 400;
+  --font-bold: 700;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -22,6 +41,13 @@ body {
 ul, li {
   list-style: none;
 }
+
+a {
+  text-decoration: none;
+  outline: none;
+  color: inherit;
+}
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
