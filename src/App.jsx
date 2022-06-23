@@ -12,7 +12,7 @@ function App() {
     <>
       <BrowserRouter>
         <Header />
-        <div className='container'>
+        <main className='container'>
           <Routes>
             <Route path='/'>
               <Route index element={<Home />} />
@@ -21,7 +21,7 @@ function App() {
               <Route path='contact' element={<Contact />} />
             </Route>
           </Routes>
-        </div>
+        </main>
         <Footer />
       </BrowserRouter>
     </>

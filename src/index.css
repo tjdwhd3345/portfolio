@@ -18,7 +18,7 @@ font-family: 'Open Sans', sans-serif;
   --gray1: #efefef;
   --gray2: #c9c9c9;
   --gray3: #989898;
-  --font-normal: 1rem;
+  --font-size1: 1rem;
   --font-size05: .5rem;
   --font-size075: .75rem;
   --font-size15: 1.5rem;
@@ -34,11 +34,7 @@ font-family: 'Open Sans', sans-serif;
   padding: 0;
   box-sizing: border-box;
 }
-html, body { height: 100%; }
-#root {
-  height: 100%;
-  min-height: 100%;
-}
+html, body, #root { height: 100%; }
 body {
   margin: 0;
   padding: 0;
