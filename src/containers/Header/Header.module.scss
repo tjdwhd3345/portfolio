@@ -1,11 +1,16 @@
 .header {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 1em;
-  padding: 0 12em;
+  // margin-bottom: 1em;
+  padding: 0 12em .5em;
   align-items: center;
-  position: relative;
-  z-index: 1;
+  position: fixed;
+  // z-index: 1;
+  width: 100%;
+  &.blur {
+    backdrop-filter: blur(30px);
+    border-bottom: 1px var(--green7) solid;
+  }
   .logo {
   }
   .navbar {

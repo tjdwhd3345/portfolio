@@ -1,11 +1,28 @@
-import React, { memo, useState } from 'react';
+import React, { memo, useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import styles from './Header.module.scss';
 
 const Header = () => {
   const [navItem] = useState(['', 'About', 'Projects', 'Contact']);
+  const [isScroll, setIsScroll] = useState(false);
+  const SCROLL_Y = 55;
+  useEffect(() => {
+    const handleScroll = (e) => {
+      console.log('scroll', e);
+      if (window.scrollY > SCROLL_Y) setIsScroll(true);
+      else setIsScroll(false);
+    };
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <header className={styles.header}>
+    <header
+      className={`${styles.header} ${isScroll ? styles.blur : undefined}`}
+    >
       <div className={styles.logo}>
         <h1>Mo</h1>
       </div>
