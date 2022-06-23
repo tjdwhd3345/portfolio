@@ -1,9 +1,11 @@
 .header {
   display: flex;
   justify-content: space-between;
-  margin-top: 1em;
+  margin-bottom: 1em;
   padding: 0 12em;
   align-items: center;
+  position: relative;
+  z-index: 1;
   .logo {
   }
   .navbar {
@@ -19,7 +21,7 @@
           font-weight: var(--font-bold);
           position: relative;
           margin-left: 2em;
-          padding: 2em;
+          padding: 2em 2em 1em;
           &.active:after,
           &:hover:after {
             width: 100%;
@@ -32,7 +34,7 @@
             width: 0;
             height: 5px;
             border-radius: 16px;
-            bottom: 25px;
+            bottom: 5px;
             left: 0;
             transition: all .3s ease-out 0s;
           }

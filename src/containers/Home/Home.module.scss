@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .avatar img{
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+  }
+  .comment {
+    margin-left: 150px;
+    font-size: var(--font-size3);
+    .color {
+      font-weight: var(--font-bold);
+      color: var(--green5);
+    }
+  }
+}

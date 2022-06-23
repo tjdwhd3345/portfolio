@@ -14,9 +14,11 @@ const Header = () => {
           {navItem.map((item, i) => (
             <li key={i} className={styles.navitem}>
               <NavLink
-                exact
+                exact='true'
                 to={item.toLowerCase()}
-                className={({ isActive }) => (isActive ? 'active' : undefined)}
+                className={({ isActive }) =>
+                  isActive ? styles.active : undefined
+                }
               >
                 {item ? item : 'Home'}
               </NavLink>
