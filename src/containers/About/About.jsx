@@ -40,13 +40,13 @@ const SkillItem = ({ skill }) => {
         <img src={`/icons/${skill.iconUrl}`} alt={`${skill.name} icon`} />
         <p>{skill.name}</p>
       </div>
-      {/* {isActive && ( */}
-      <div className={styles.itemDesc}>
-        {skill.descs.map((desc, i) => (
-          <p key={i}>{desc}</p>
-        ))}
-      </div>
-      {/* )} */}
+      {isActive && (
+        <div className={styles.itemDesc}>
+          {skill.descs.map((desc, i) => (
+            <p key={i}>{desc}</p>
+          ))}
+        </div>
+      )}
     </div>
   );
 };

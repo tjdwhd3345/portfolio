@@ -1,6 +1,6 @@
 .container {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   position: relative;
   transform: translateY(-100%);
@@ -8,4 +8,17 @@
   height: 100px;
   background-color: var(--green7);
   color: var(--white2);
+  .copyright {
+    cursor: default;
+  }
+  .link {
+    font-size: var(--font-size15);
+    ul { 
+      display: flex;
+      li {
+        cursor: pointer;
+        margin-right: 25px;
+      }
+    }
+  }
 }
