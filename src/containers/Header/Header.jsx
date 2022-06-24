@@ -7,8 +7,7 @@ const Header = () => {
   const [isScroll, setIsScroll] = useState(false);
   const SCROLL_Y = 55;
   useEffect(() => {
-    const handleScroll = (e) => {
-      console.log('scroll', e);
+    const handleScroll = () => {
       if (window.scrollY > SCROLL_Y) setIsScroll(true);
       else setIsScroll(false);
     };
@@ -20,9 +19,7 @@ const Header = () => {
   }, []);
 
   return (
-    <header
-      className={`${styles.header} ${isScroll ? styles.blur : undefined}`}
-    >
+    <header className={`${styles.header} ${isScroll ? styles.blur : ''}`}>
       <div className={styles.logo}>
         <h1>Mo</h1>
       </div>

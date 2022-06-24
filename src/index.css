@@ -18,11 +18,17 @@ font-family: 'Open Sans', sans-serif;
   --gray1: #efefef;
   --gray2: #c9c9c9;
   --gray3: #989898;
-  --font-size1: 1rem;
+  --font-size025: .25rem;
   --font-size05: .5rem;
   --font-size075: .75rem;
+  --font-size1: 1rem;
+  --font-size125: 1.25rem;
   --font-size15: 1.5rem;
+  --font-size175: 1.75rem;
   --font-size2: 2rem;
+  --font-size225: 2.25rem;
+  --font-size25: 2.5rem;
+  --font-size275: 2.75rem;
   --font-size3: 3rem;
   --font-light: 300;
   --font-regular: 400;
@@ -35,6 +41,9 @@ font-family: 'Open Sans', sans-serif;
   box-sizing: border-box;
 }
 html, body, #root { height: 100%; }
+#root {
+  scroll-behavior: smooth;
+}
 body {
   margin: 0;
   padding: 0;

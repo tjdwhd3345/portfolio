@@ -8,7 +8,39 @@ section {
   .self {
     width: 600px;
     p {
-      font-size: var(--font-size15);
+      font-size: var(--font-size125);
+    }
+    .hello {
+      font-size: var(--font-size225);
+      margin-bottom: 15px;
+    }
+    .subTitle {
+      font-size: var(--font-size175);
+      margin-bottom: 25px;
+    }
+    p:nth-child(1):before {
+      content: "";
+        display: block;
+        width: 250px;
+        height: 250px;
+        position: absolute;
+        background: var(--green7);
+        z-index: -1;
+        transform: translate(-50%, -45%);
+        border-radius: 50%;
+        opacity: 0.25;
+    }
+    p:nth-child(2):before {
+      content: "";
+      display: block;
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      background: var(--green4);
+      z-index: -1;
+      transform: translate(-150%, -25%);
+      border-radius: 50%;
+      opacity: 0.25;
     }
   }
   .image img{
@@ -16,75 +48,84 @@ section {
     margin-left: 200px;
   }
 }
-.skills {
+.skills,
+.interest {
   margin: 130px 200px 0;
   padding-bottom: 100px;
   h2 {
     border-bottom: 3px var(--green4) solid;
   }
-  .skillContainer {
-    margin-top: 30px;
+}
+.interest {
+  margin: 0 200px;
+}
+.container {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .item {
+    border: 1px rgba(0, 133, 67, 0.2) solid;
+    border-radius: 15px;
+    margin: 0 15px 30px;
+    width: 400px;
+    height: 120px;
     display: flex;
-    flex-wrap: wrap;
-    .skillItem {
-      border: 1px rgba(0, 133, 67, 0.2) solid;
-      border-radius: 15px;
-      margin-right: 30px;
-      margin-bottom: 30px;
-      width: 400px;
-      height: 120px;
+    flex-direction: column;
+    cursor: pointer;
+    transition: transform .2s ease-out, box-shadow .2s ease-out;
+    .itemTitle {
       display: flex;
-      flex-direction: column;
-      cursor: pointer;
-      transition: transform .2s ease-out, box-shadow .2s ease-out;
-      .itemTitle {
-        display: flex;
-        align-items: center;
+      align-items: center;
+      transition: all .3s ease-in-out 0s;
+      padding: 10px;
+      img {
+        width: 80px;
+        height: 80px;
+        transform: translateX(140px);
         transition: all .3s ease-in-out 0s;
-        padding: 10px;
+      }
+      p {
+        font-weight: var(--font-bold);
+        transform: scale(0, 0);
+        margin-left: 10px;
+        transition: transform .3s ease-in-out 0s;
+      }
+    }
+    .itemDesc {
+      padding: 10px;
+      visibility: hidden;
+      opacity: 0;
+      svg {
+        margin-right: 5px;
+        color: var(--green5);
+      }
+    }
+    &.active,
+    &:hover {
+      transform: translateY(-5px);
+      background-color: #fafafa;
+      -webkit-box-shadow: 0px 10px 60px 5px rgba(0, 133, 67, 0.20);
+      -moz-box-shadow: 0px 10px 60px 5px rgba(0, 133, 67, 0.20);
+      box-shadow: 0px 10px 60px 5px rgba(0, 133, 67, 0.20);
+    }
+    &.active {
+      height: 100%;
+      transition: height .2s ease-in-out 3s;
+      .itemTitle {
         img {
-          width: 80px;
-          height: 80px;
-          transform: translateX(140px);
-          transition: all .3s ease-in-out 0s;
+          transform: translateX(0) scale(1, 1);
+          width: 40px;
+          height: 40px;
         }
-        p { 
-          transform: scale(0, 0);
-          margin-left: 10px;
-          transition: transform .3s ease-in-out 0s;
+        p {
+          transform: translateX(0) scale(1, 1);
         }
       }
       .itemDesc {
-        padding: 10px;
-        visibility: hidden;
-        opacity: 0;
-      }
-      &.active,
-      &:hover {
-        transform: translateY(-5px);
-        background-color: #fafafa;
-        -webkit-box-shadow: 0px 10px 60px 5px rgba(0, 133, 67, 0.20);
-          -moz-box-shadow: 0px 10px 60px 5px rgba(0, 133, 67, 0.20);
-          box-shadow: 0px 10px 60px 5px rgba(0, 133, 67, 0.20);
-      }
-      &.active {
-        height: auto;
-        transition: height .2s ease-in-out 3s;
-        .itemTitle {
-          img {
-            transform: translateX(0) scale(1, 1);
-            width: 40px;
-            height: 40px;
-          }
-          p {
-            transform: translateX(0) scale(1, 1);
-          }
-        }
-        .itemDesc {
-          visibility: visible;
-          opacity: 1;
-          transition: all .2s ease-in-out .3s;
-        }
+        visibility: visible;
+        opacity: 1;
+        transition: all .2s ease-in-out .3s;
       }
     }
   }
