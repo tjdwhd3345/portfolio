@@ -31,7 +31,7 @@ const Introduce = memo(() => {
   );
 });
 
-const SkillItem = ({ skill }) => {
+const Item = ({ item }) => {
   const [isActive, setIsActive] = useState(false);
   return (
     <div
@@ -39,12 +39,12 @@ const SkillItem = ({ skill }) => {
       onClick={() => setIsActive((prev) => !prev)}
     >
       <div className={styles.itemTitle}>
-        <img src={`/icons/${skill.iconUrl}`} alt={`${skill.name} icon`} />
-        <p>{skill.name}</p>
+        <img src={`/icons/${item.iconUrl}`} alt={`${item.name} icon`} />
+        <p>{item.name}</p>
       </div>
       {isActive && (
         <div className={styles.itemDesc}>
-          {skill.descs.map((desc, i) => (
+          {item.descs.map((desc, i) => (
             <p key={i}>
               <FaCheck />
               {desc}
@@ -62,50 +62,25 @@ const SkillSet = memo(({ skills }) => {
       <h2>Skills</h2>
       <div className={styles.container}>
         {skills.map((skill, i) => {
-          return <SkillItem skill={skill} key={i} />;
+          return <Item item={skill} key={i} />;
         })}
       </div>
     </section>
   );
 });
 
-const InterestItem = ({ interest }) => {
-  const [isActive, setIsActive] = useState(false);
-  return (
-    <div
-      className={`${styles.item} ${isActive ? styles.active : ''}`}
-      onClick={() => setIsActive((prev) => !prev)}
-    >
-      <div className={styles.itemTitle}>
-        <img src={`/icons/${interest.iconUrl}`} alt={`${interest.name} icon`} />
-        <p>{interest.name}</p>
-      </div>
-      {isActive && (
-        <div className={styles.itemDesc}>
-          {interest.descs.map((desc, i) => (
-            <p key={i}>
-              <FaCheck />
-              {desc}
-            </p>
-          ))}
-        </div>
-      )}
-    </div>
-  );
-};
-
-const Interest = ({ interests }) => {
+const Interest = memo(({ interests }) => {
   return (
     <section className={styles.interest}>
       <h2>Interest</h2>
       <div className={styles.container}>
         {interests.map((interest, i) => {
-          return <InterestItem interest={interest} key={i} />;
+          return <Item item={interest} key={i} />;
         })}
       </div>
     </section>
   );
-};
+});
 
 const About = () => {
   const [skills] = useState([
@@ -113,20 +88,20 @@ const About = () => {
       name: 'HTML',
       iconUrl: 'html5.svg',
       descs: [
-        '이것저것할 수 있습니다1',
-        '이것저것할 수 있습니다2',
+        '시멘틱 태그를 활용한 의미있는 페이지를 만들 수 있습니다',
+        '웹표준과 웹접근성을 준수하는 페이지를 만들 수 있습니다',
         '이것저것할 수 있습니다3',
       ],
     },
     {
       name: 'CSS',
       iconUrl: 'css3.svg',
-      descs: ['이것저것할 수 있습니다', '이것도 할 수 있습니다'],
+      descs: ['PostCSS, Sass와 같은 CSS 전처리기를 사용할 수 있습니다'],
     },
     {
       name: 'JavaScript',
       iconUrl: 'js.svg',
-      descs: ['이것저것할 수 있습니다'],
+      descs: ['ES5 이상의 구문을 사용할 수 있습니다'],
     },
     {
       name: 'React',
@@ -136,27 +111,30 @@ const About = () => {
     {
       name: 'MaraiDB / MySQL',
       iconUrl: 'mariadb.svg',
-      descs: ['이것저것할 수 있습니다'],
+      descs: [
+        '기본적인 CRUD 쿼리문을 작성할 수 있습니다',
+        '조건식과 JOIN을 활용한 SubQuery를 작성할 수 있습니다',
+      ],
     },
     {
       name: 'Git, Github',
       iconUrl: 'git.svg',
-      descs: ['이것저것할 수 있습니다'],
+      descs: [],
     },
     {
       name: 'Vercel',
       iconUrl: 'vercel.svg',
-      descs: ['이것저것할 수 있습니다'],
+      descs: ['Git과 연동하여 배포할 수 있습니다'],
     },
     {
       name: 'Jira / Confluence',
       iconUrl: 'confluence.svg',
-      descs: ['Jira, Confluence 협업가능'],
+      descs: ['Jira, Confluence를 활용한 이슈관리와 협업이 가능합니다'],
     },
     {
       name: 'Notion',
       iconUrl: 'notion.svg',
-      descs: ['Notion으로 협업가능'],
+      descs: ['Notion으로 문서작성과 팀협업을 할 수 있습니다'],
     },
   ]);
   const [interests] = useState([

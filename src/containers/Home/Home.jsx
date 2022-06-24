@@ -26,6 +26,7 @@ const Home = () => {
     <section className={styles.container}>
       <div className={styles.avatar}>
         <img src='/avatar/avatar.png' alt='' />
+        <Avatar />
       </div>
       <div className={styles.comment}>
         <p>안녕하세요.</p>
