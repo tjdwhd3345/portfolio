@@ -21,7 +21,9 @@ const Header = () => {
   return (
     <header className={`${styles.header} ${isScroll ? styles.blur : ''}`}>
       <div className={styles.logo}>
-        <h1>Mo</h1>
+        <NavLink to={'avatar'}>
+          <h1>Mo</h1>
+        </NavLink>
       </div>
       <nav className={styles.navbar}>
         <ul className={styles.navlist}>

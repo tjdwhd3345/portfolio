@@ -12,6 +12,9 @@
     border-bottom: 1px var(--green7) solid;
   }
   .logo {
+    a {
+      cursor: default;
+    }
   }
   .navbar {
     display: flex;
