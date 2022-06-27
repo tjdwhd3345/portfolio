@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Home.module.scss';
 import AvatarView from '@sarge/avatar-view';
+import Typewriter from 'typewriter-effect';
 
 const Avatar = () => {
   const avtUrl = '/avatar/avatar2.glb';
@@ -21,7 +22,14 @@ const Avatar = () => {
     />
   );
 };
+
 const Home = ({ avatar }) => {
+  const typewriter = [
+    '사용자 친화적인',
+    '꾸준히 성장하는',
+    '꼼꼼한',
+    '도전을 멈추지 않는',
+  ];
   return (
     <section className={styles.container}>
       <div className={styles.avatar}>
@@ -30,6 +38,16 @@ const Home = ({ avatar }) => {
       </div>
       <div className={styles.comment}>
         <p>안녕하세요.</p>
+        <p className={styles.typo}>
+          <Typewriter
+            options={{
+              strings: typewriter,
+              autoStart: true,
+              loop: true,
+              deleteSpeed: 50,
+            }}
+          />
+        </p>
         <p className={styles.color}>FrontEnd Developer</p>
         <p>모성종입니다.</p>
       </div>
