@@ -1,10 +1,13 @@
 .container {
   height: auto;
   min-height: 100%;
-  padding: 1vh 2vw 100px;
+  padding: 2.5vh 2vw 100px;
   margin: 0 10vw;
   border: 1px rgba(0, 133, 67, 0.2) solid;
   border-radius: 15px;
+  & > span {
+    font-size: var(--font-size125);
+  }
   .list {
     font-size: var(--font-size125);
     font-weight: var(--font-bold);
