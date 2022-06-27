@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   // margin-bottom: 1em;
-  padding: 0 12em .5em;
+  padding: .5em 12em;
   align-items: center;
   position: fixed;
   z-index: 1;
@@ -13,7 +13,11 @@
   }
   .logo {
     a {
+      display: flex;
       cursor: default;
+      img {
+        width: 60px;
+      }
     }
   }
   .navbar {

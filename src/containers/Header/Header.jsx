@@ -22,7 +22,7 @@ const Header = () => {
     <header className={`${styles.header} ${isScroll ? styles.blur : ''}`}>
       <div className={styles.logo}>
         <NavLink to={'avatar'}>
-          <h1>Mo</h1>
+          <img src='/logo.png' alt='logo' />
         </NavLink>
       </div>
       <nav className={styles.navbar}>

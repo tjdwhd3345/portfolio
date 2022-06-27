@@ -50,20 +50,19 @@ section {
 }
 .skills,
 .interest {
-  margin: 130px 200px 0;
+  margin: 130px 10vw 0;
   padding-bottom: 100px;
   h2 {
     border-bottom: 3px var(--green4) solid;
   }
 }
 .interest {
-  margin: 0 200px;
+  margin: 0 10vw;
 }
 .container {
   margin-top: 30px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   .item {
     border: 1px rgba(0, 133, 67, 0.2) solid;
     border-radius: 15px;

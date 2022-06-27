@@ -109,11 +109,27 @@ const About = () => {
       descs: ['이것저것할 수 있습니다'],
     },
     {
-      name: 'MaraiDB / MySQL',
+      name: 'MaraiDB',
       iconUrl: 'mariadb.svg',
       descs: [
         '기본적인 CRUD 쿼리문을 작성할 수 있습니다',
         '조건식과 JOIN을 활용한 SubQuery를 작성할 수 있습니다',
+      ],
+    },
+    {
+      name: ' MySQL',
+      iconUrl: 'mysql.svg',
+      descs: [
+        '기본적인 CRUD 쿼리문을 작성할 수 있습니다',
+        '조건식과 JOIN을 활용한 SubQuery를 작성할 수 있습니다',
+      ],
+    },
+    {
+      name: 'Firebase',
+      iconUrl: 'firebase.svg',
+      descs: [
+        'Firebase에서 제공되는 기능을 사용할 수 있습니다',
+        'Authentication, Real-time Database를 활용해 인증, 실시간DB를 할 수 있습니다',
       ],
     },
     {

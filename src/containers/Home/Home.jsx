@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import styles from './Home.module.scss';
 import AvatarView from '@sarge/avatar-view';
 
