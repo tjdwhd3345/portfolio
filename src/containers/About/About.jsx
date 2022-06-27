@@ -1,4 +1,4 @@
-import React, { useState, memo } from 'react';
+import React, { useState, useEffect, memo } from 'react';
 import { FaCheck } from 'react-icons/fa';
 import styles from './About.module.scss';
 
@@ -16,8 +16,8 @@ const Introduce = memo(() => {
           않습니다.
         </p>
         <p>
-          UI솔루션 엔지니어로 시작해서 현재 프론트엔드 개발자로서 나아가고자
-          합니다.
+          UI솔루션 기술지원 엔지니어로 시작해서 현재 프론트엔드 개발자로서
+          나아가고자 합니다.
         </p>
         <p>
           3년간 UI솔루션 엔지니어로서의 경험에서 터득한 웹 개발지식과 책임감,
@@ -151,6 +151,7 @@ const About = () => {
       descs: [
         'git을 사용해 소스코드 형상관리를 할 수 있습니다',
         'branch를 구분해 프로젝트 별 소스를 관리할 수 있습니다',
+        'github pages로 정적페이지를 배포할 수 있습니다',
       ],
     },
     {
@@ -206,6 +207,9 @@ const About = () => {
       ],
     },
   ]);
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
   return (
     <>
       <Introduce />

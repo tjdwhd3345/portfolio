@@ -1,4 +1,4 @@
-import React, { useState, memo } from 'react';
+import React, { useState, memo, useEffect } from 'react';
 import styles from './Projects.module.scss';
 import { BsDot } from 'react-icons/bs';
 import { GoBrowser } from 'react-icons/go';
@@ -119,6 +119,10 @@ const Projects = () => {
       demo: 'https://tjdwhd3345.github.io/business-card-maker/',
     },
   ]);
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
   return (
     <div className={styles.container}>
       <Careers careers={careers} />
