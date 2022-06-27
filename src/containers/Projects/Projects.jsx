@@ -82,7 +82,10 @@ const Projects = () => {
       duration: '2021. 07. 26 ~ 2021. 11. 25',
       position: 'IT품질혁신팀 / 사원(프리랜서)',
       jobDesc: 'LG U+ 데일리 리포트 관제시스템 개발',
-      jobMessage: ['WebSquare, MariaDB, Devon', 'WebSquare를 사용해서 UI'],
+      jobMessage: [
+        'WebSquare를 사용해서 대시보드 UI화면 개발',
+        'WebSquare, MariaDB, Devon Framework을 사용',
+      ],
     },
     {
       company: '인스웨이브시스템즈',
@@ -92,7 +95,8 @@ const Projects = () => {
       jobMessage: [
         'HTML5, ES5 기반 UI솔루션 ‘WebSquare’을 사용한 프로젝트의 UI기술지원',
         '공공기관(방위사업청, 한국무역보험공사 등), 금융권, 기업 등 다수 프로젝트의 솔루션 기술지원',
-        '솔루션을 웹 애플리케이션 상에 설치부터 성능개선, 접근성 등',
+        '솔루션을 웹 애플리케이션 상에 설치',
+        'UI 성능개선, 웹접근성 등',
       ],
     },
   ]);

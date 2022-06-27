@@ -1,0 +1,28 @@
+.container {
+  height: auto;
+  min-height: 100%;
+  padding: 1vh 2vw 100px;
+  margin: 0 10vw;
+  border: 1px rgba(0, 133, 67, 0.2) solid;
+  border-radius: 15px;
+  .list {
+    font-size: var(--font-size125);
+    font-weight: var(--font-bold);
+    display: flex;
+    align-items: center;
+    line-height: 8vh;
+    & > span {
+      width: 80px;
+      margin-right: 20px;
+    }
+    svg {
+      margin-right: 10px;
+      // color: #000;
+      color: var(--green4);
+    }
+    & > a {
+      display: flex;
+      align-items: center;
+    }
+  }
+}

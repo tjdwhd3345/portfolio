@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className={styles.container}>
       <div className={styles.copyright}>
-        <span>Designed and Developed 2022 By Mo</span>
+        <span>Designed and Developed By Mo Sung Jong, 2022</span>
       </div>
       <div className={styles.link}>
         <ul>
