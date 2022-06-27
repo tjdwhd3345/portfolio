@@ -88,25 +88,38 @@ const About = () => {
       name: 'HTML',
       iconUrl: 'html5.svg',
       descs: [
-        '시멘틱 태그를 활용한 의미있는 페이지를 만들 수 있습니다',
-        '웹표준과 웹접근성을 준수하는 페이지를 만들 수 있습니다',
-        '이것저것할 수 있습니다3',
+        '시멘틱 태그를 활용한 의미있는 페이지',
+        '웹표준과 웹접근성을 준수하는 페이지',
+        '크로스 브라우징',
       ],
     },
     {
       name: 'CSS',
       iconUrl: 'css3.svg',
-      descs: ['PostCSS, Sass와 같은 CSS 전처리기를 사용할 수 있습니다'],
+      descs: [
+        'PostCSS, Sass와 같은 CSS 전처리기를 사용',
+        '미디어쿼리를 사용한 반응형CSS',
+      ],
     },
     {
       name: 'JavaScript',
       iconUrl: 'js.svg',
-      descs: ['ES5 이상의 구문을 사용할 수 있습니다'],
+      descs: [
+        'ES6+의 구문을 사용가능',
+        'Promise, async/await 구현',
+        '이벤트루프와 자바스크립트의 동작 이해',
+        'React, Vue와 같은 모던 라이브러리에 대한 이해',
+        'javascript로 코딩테스트 응시 가능',
+      ],
     },
     {
       name: 'React',
       iconUrl: 'react.svg',
-      descs: ['이것저것할 수 있습니다'],
+      descs: [
+        '함수형 컴포넌트',
+        'Life-Cycle과 Hooks',
+        'React-Router을 사용한 클라이언트 라우팅',
+      ],
     },
     {
       name: 'MaraiDB',
@@ -135,48 +148,61 @@ const About = () => {
     {
       name: 'Git, Github',
       iconUrl: 'git.svg',
-      descs: [],
+      descs: [
+        'git을 사용해 소스코드 형상관리를 할 수 있습니다',
+        'branch를 구분해 프로젝트 별 소스를 관리할 수 있습니다',
+      ],
     },
     {
       name: 'Vercel',
       iconUrl: 'vercel.svg',
-      descs: ['Git과 연동하여 배포할 수 있습니다'],
+      descs: ['소스를 Git과 연동하여 서버에 배포할 수 있습니다'],
     },
     {
-      name: 'Jira / Confluence',
+      name: 'Jira',
+      iconUrl: 'jira.svg',
+      descs: ['Jira를 활용한 이슈관리와 협업이 가능합니다'],
+    },
+    {
+      name: 'Confluence',
       iconUrl: 'confluence.svg',
-      descs: ['Jira, Confluence를 활용한 이슈관리와 협업이 가능합니다'],
+      descs: ['Confluence를 활용한 Wiki 작성과 협업이 가능합니다'],
     },
     {
       name: 'Notion',
       iconUrl: 'notion.svg',
-      descs: ['Notion으로 문서작성과 팀협업을 할 수 있습니다'],
+      descs: [
+        'Notion으로 문서작성과 팀협업을 할 수 있습니다',
+        '데이터베이스 테이블로 Kanban보드형 일정관리를 할 수 있습니다',
+      ],
     },
   ]);
   const [interests] = useState([
     {
       name: 'TypeScript',
       iconUrl: 'typescript.svg',
-      descs: ['이것저것 배우고있습니다'],
+      descs: [
+        'React와 가장 많이 사용되는 FE언어로써 관심이 있습니다',
+        'Interface와 Types, Generic에 대해 학습하고 있습니다',
+      ],
     },
     {
       name: 'Node',
       iconUrl: 'nodejs.svg',
-      descs: ['이것저것 배우고있습니다'],
+      descs: ['MERN스택으로써 서버구성하는 것에 관심이 있습니다'],
     },
     {
       name: 'Express',
       iconUrl: 'express.svg',
-      descs: ['이것저것 배우고있습니다'],
+      descs: ['MERN스택으로써 서버구성하는 것에 관심이 있습니다'],
     },
     {
       name: 'Python',
       iconUrl: 'python.svg',
       descs: [
-        '3f23f23f',
-        'sdgbsdgb',
-        'sel2345y다ㄴㅇㅀㄴㅇㅀㄴㅇㅎㄹ',
-        'selensdfsdfsdffffffffffffffffffffffffffffffffffffsdfasdf awef 23r',
+        '백엔드 관리 언어로 관심이 있습니다',
+        '코딩테스트 언어로 관심이 있습니다',
+        '취미로 Selenium과 함께 사용해 로컬에서 예매자동화 프로그램을 만들어본 경험이 있습니다',
       ],
     },
   ]);
