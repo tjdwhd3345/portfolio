@@ -44,6 +44,11 @@ html, body, #root { height: 100%; }
 #root {
   scroll-behavior: smooth;
 }
+@media screen and (max-width: 1023px) {
+  #root {
+    position: relative;
+  }
+}
 body {
   margin: 0;
   padding: 0;
@@ -63,7 +68,6 @@ a {
   outline: none;
   color: inherit;
 }
-
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

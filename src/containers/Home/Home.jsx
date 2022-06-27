@@ -38,16 +38,14 @@ const Home = ({ avatar }) => {
       </div>
       <div className={styles.comment}>
         <p>안녕하세요.</p>
-        <p className={styles.typo}>
-          <Typewriter
-            options={{
-              strings: typewriter,
-              autoStart: true,
-              loop: true,
-              deleteSpeed: 50,
-            }}
-          />
-        </p>
+        <Typewriter
+          options={{
+            strings: typewriter,
+            autoStart: true,
+            loop: true,
+            deleteSpeed: 50,
+          }}
+        />
         <p className={styles.color}>FrontEnd Developer</p>
         <p>모성종입니다.</p>
       </div>

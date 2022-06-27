@@ -1,3 +1,5 @@
+@import '../../responsive/utils.scss';
+
 section {
   margin: 0 auto;
 }
@@ -43,9 +45,11 @@ section {
       opacity: 0.25;
     }
   }
-  .image img{
-    width: 400px;
-    margin-left: 200px;
+  .image {
+    & img {
+      width: 400px;
+      margin-left: 200px;
+    }
   }
 }
 .skills,
@@ -125,6 +129,85 @@ section {
         visibility: visible;
         opacity: 1;
         transition: all .2s ease-in-out .3s;
+      }
+    }
+  }
+}
+
+@include tablet {
+  .introduce {
+    .self {
+      width: 100%;
+      p {
+        font-size: var(--font-size1);
+      }
+      .hello {
+        font-size: var(--font-size15);
+        margin-bottom: 15px;
+      }
+      .subTitle {
+        font-size: var(--font-size125);
+        margin-bottom: 25px;
+      }
+      p:nth-child(1):before {
+        width: 200px;
+        height: 200px;
+        transform: translate(-50%, -40%);
+      }
+      p:nth-child(2):before {
+        width: 80px;
+        height: 80px;
+        transform: translate(70%, -145%);
+      }
+    }
+    .image {
+      & img {
+        position: fixed;
+        top: 0;
+        left: 0;
+        margin-left: 0px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      background-color: var(--white1);
+      opacity: 0.3;
+      z-index: -1;
+    }
+    margin: 5vh 10vw 0;
+  }
+  .container {
+    .item {
+      background-color: var(--white1);
+      .itemTitle {
+        img {
+          width: 80px;
+          height: 80px;
+          transform: translateX(0);
+          transition: all .3s ease-in-out 0s;
+        }
+      }
+      &:hover {
+        transform: translateY(0);
+      }
+      &.active {
+        height: 100%;
+        transition: height .2s ease-in-out 3s;
+        .itemTitle {
+          img {
+            transform: translateX(0) scale(1, 1);
+            width: 40px;
+            height: 40px;
+          }
+          p {
+            transform: translateX(0) scale(1, 1);
+          }
+        }
+        .itemDesc {
+          visibility: visible;
+          opacity: 1;
+          transition: all .2s ease-in-out .3s;
+        }
       }
     }
   }

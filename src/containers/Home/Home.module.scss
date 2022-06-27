@@ -1,3 +1,5 @@
+@import '../../responsive/utils.scss';
+
 .container {
   display: flex;
   justify-content: center;
@@ -13,6 +15,19 @@
     .color {
       font-weight: var(--font-bold);
       color: var(--green5);
+    }
+  }
+
+  @include tablet {
+    flex-direction: column;
+    .avatar img {
+      width: 240px;
+      height: 240px;
+    }
+    .comment {
+      margin-left: initial;
+      margin-top: 1em;
+      font-size: 4vh;
     }
   }
 }

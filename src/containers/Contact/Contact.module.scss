@@ -1,3 +1,4 @@
+@import '../../responsive/utils.scss';
 .container {
   height: auto;
   min-height: 100%;
@@ -7,6 +8,9 @@
   border-radius: 15px;
   & > span {
     font-size: var(--font-size125);
+    @include tablet {
+      font-size: var(--font-size1);
+    }
   }
   .list {
     font-size: var(--font-size125);
@@ -14,7 +18,7 @@
     display: flex;
     align-items: center;
     line-height: 8vh;
-    & > span {
+    & span {
       width: 80px;
       margin-right: 20px;
     }
@@ -23,9 +27,34 @@
       // color: #000;
       color: var(--green4);
     }
-    & > a {
+    & a {
       display: flex;
       align-items: center;
+    }
+  }
+  @include tablet {
+    &>span {
+      font-size: var(--font-size1);
+    }
+    .list {
+      display: flex;
+      flex-direction: column;
+      line-height: 3vh;
+      align-items: flex-start;
+      margin-top: 1.5em;
+      & div {
+        display: flex;
+        align-items: center;
+      }
+      & span {
+        width: 100%;
+        margin-right: 0px;
+      }
+      svg {
+        font-size: var(--font-size125);
+        margin-right: 5px;
+      }
+      font-size: var(--font-size1);
     }
   }
 }

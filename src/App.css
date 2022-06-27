@@ -10,3 +10,10 @@
   color: var(--green5);
   /* font-weight: var(--font-light); */
 }
+
+@media screen and (max-width: 1024px) {
+  .container {
+    padding-top: 126px;
+    margin-top: -76px;
+  }
+}
